@@ -10,7 +10,8 @@
  */
 var ljnotes = {
     app: "sme", // spell-me-out
-    version: 1
+    version: 1, 
+    appName: "LJNotes Spell-me-out!"
 };
 
 /*!
@@ -18,6 +19,35 @@ var ljnotes = {
  */
 (function(globalObject) {
     
+    // Locals.
+    var inputLabelText = "Input the text to spell out"
     
+    // Set the spell-me-out context view-model
+    var smeAppViewModel = function(defaultInput) {
+        
+        var self = this;
+        
+        // Set the application name
+        this.appName = globalObject.appName;
+        
+        // Input label text
+        this.smeInputLabelText = inputLabelText;
+        
+        // Input data
+        this.smeInput = ko.observable(defaultInput || "");
+        
+        // Input data length 
+        this.smeInputLength = ko.computed(function () {
+            return this.smeInput().length; 
+        }, this);
+    };
+    
+    // on document ready
+    $(document).ready(function(){
+        
+        // bind the model to the sme UI context
+        ko.applyBindings(new smeAppViewModel(""));
+        
+    });
     
 })(ljnotes);

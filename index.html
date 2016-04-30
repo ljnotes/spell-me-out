@@ -52,7 +52,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">LJNotes Spell-me-out!</a>
+                    <a class="navbar-brand" href="#" data-bind="text: appName"></a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
@@ -68,14 +68,14 @@
         <!-- Content: begins -->
         <div class="container">
 
-            <div class="sme-content">
+            <div class="sme-content" id="sme-context">
                 <h1>Welcome!</h1>
-                <p class="lead">Input the word to spell out</p>
-                <div class="input-group sme-input">
-                    <input type="text" class="form-control" placeholder="Input the word to spell out" title="Input the word to spell out" />
-                    <span class="input-group-addon" id="basic-addon2">0</span>
+                <p class="lead" data-bind="text: smeInputLabelText"></p>
+                <div class="input-group sme-input-section">
+                    <input type="text" class="form-control" data-bind="value: smeInput, valueUpdate: 'afterkeydown', attr: { placeholder: smeInputLabelText, title: smeInputLabelText }"/>
+                    <span class="input-group-addon" id="basic-addon2" data-bind="text: smeInputLength"></span>
                 </div>
-                <div class="input-group sme-output">
+                <div class="input-group sme-output-section">
                 </div>
             </div>
 
@@ -102,7 +102,7 @@
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='https://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+            ga('create','UA-77121975-1','auto');ga('send','pageview');
         </script>
         <!-- Scripts: ends -->
     </body>
