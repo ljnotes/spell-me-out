@@ -30,6 +30,33 @@ var ljnotes = {
             newText = text.replace(/^\s+|\s+$/gm,''); 
         }
         return newText;
+    }; 
+    
+    // Get the spell out text data for the passed in text. 
+    // @param {String}: Input text
+    // @return {Array}: Array holding data for each letter in the text
+    var getSpellOutTextData = function(inputText) {
+        
+        var data = [];
+        var smeData = globalObject.smeData;
+        
+        if(inputText && smeData) {
+            
+            var letters = inputText.split('');
+            var letter = null;
+            var letterObj = null;
+            
+            for(var i=0; i < letters.length; i++) {
+                
+                letter = letters[i];
+                if(textTrim(letter) != '') {
+                    letterObj = smeData[letter];
+                    data.push(letterObj || {spell: letter, letter: letter});
+                }
+            }
+        }
+        
+        return data;
     };
     
     // Set the spell-me-out context view-model
@@ -49,28 +76,31 @@ var ljnotes = {
         // Input data length 
         this.smeInputLength = ko.computed(function () {
             return this.smeInput().length; 
-        }, this);
+        }, this); 
         
-        // Get the spell-out text for the letter
-        this.spellOutText = ko.computed(function (letter) {
+        // The letters
+        this.smeLetters = ko.observableArray(getSpellOutTextData(defaultInput));
+        
+        // Subscribe to the changes in smeInput
+        this.smeInput.subscribe(function (newValue) {
             
-            var textObj, 
-                text  = null;
+            // Clear the letters
+            this.smeLetters([]);
             
-            // If we have a letter and we have the letter dictionary
-            if(letter && textTrim(letter) != '' && globalObject.smeData) {
-                textObj = globalObject.smeData[letter];
-                if(textObj) { 
-                    text = textObj.spell;
-                }
+            // Add new letters
+            var letterData = getSpellOutTextData(newValue);
+            for(var i=0; i < letterData.length; i++) {
+                this.smeLetters.push(letterData[i]);
             }
             
-            return text; 
-            
-        }, this);
+        }, this); 
     };
     
-    // bind the model to application view
-    ko.applyBindings(new smeAppViewModel());
+    // On document ready
+    $(document).ready(function() {
+        
+        // bind the model to application view
+        ko.applyBindings(new smeAppViewModel(""));
+    });
 
 })(ljnotes);

@@ -75,7 +75,8 @@
                     <input type="text" class="form-control" data-bind="value: smeInput, valueUpdate: 'afterkeydown', attr: { placeholder: smeInputLabelText, title: smeInputLabelText }" autofocus />
                     <span class="input-group-addon" id="basic-addon2" data-bind="text: smeInputLength"></span>
                 </div>
-                <div class="input-group sme-output-section">
+                <div class="input-group sme-output-section" data-bind="foreach: smeLetters">
+                    <span class="label label-info" data-bind="text: spell"></span>
                 </div>
             </div>
 
