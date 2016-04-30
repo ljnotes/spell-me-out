@@ -17,7 +17,7 @@
         f: {spell: "Foxtrot"}, 
         g: {spell: "Golf"}, 
         h: {spell: "Hotel"}, 
-        i: {spell: "India"}, 
+        i: {spell: "India"},   
         j: {spell: "Juliet"}, 
         k: {spell: "Kilo"}, 
         l: {spell: "Lima"}, 
