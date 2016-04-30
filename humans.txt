@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    ljnotes -- Developer -- https://twitter.com/ljnotes
+
+# THANKS
+
+    HTML5 Boilerplate -- https://html5boilerplate.com/
+    jQuery -- https://jquery.com/
+    Bootstrap -- http://getbootstrap.com/
+    Knockout -- http://knockoutjs.com/
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Apache Server Configs, jQuery, Modernizr, Normalize.css, Bootstrap, Knockout
