@@ -49,11 +49,23 @@ var ljnotes = {
             for(var i=0; i < letters.length; i++) {
                 
                 letter = letters[i];
-                if(textTrim(letter) != '') {
-                    letterObj = smeData[letter];
+                letterObj = null;
+                
+                /* TODO:// Handle white-space 
+                // white-space
+                if(textTrim(letter) == '') {
+                    data.push(letterObj || {spell: " ", letter: " "});
+                }
+                else { // not white-space
+                    letterObj = smeData[letter.toLowerCase()];
+                    data.push(letterObj || {spell: letter, letter: letter});
+                }*/
+                
+                if (textTrim(letter) != '') { // not white-space
+                    letterObj = smeData[letter.toLowerCase()];
                     data.push(letterObj || {spell: letter, letter: letter});
                 }
-            }
+            } 
         }
         
         return data;

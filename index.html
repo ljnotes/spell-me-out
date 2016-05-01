@@ -12,6 +12,15 @@
         <!-- Title -->
         <title>LJNotes - Spell-me-out!</title>
         
+        <!-- Facebook and Open Graph tags -->
+        <!-- You can use Open Graph tags to customize link previews. 
+        Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+        <meta property="og:url"           content="http://ljnotes.com/" />
+        <meta property="og:type"          content="website" />
+        <meta property="og:title"         content="ljnotes.com" />
+        <meta property="og:description"   content="Lijo Joseph, Software Developer" />
+        <meta property="og:image"         content="" />
+        
         <!-- favicon.ico-->
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -36,6 +45,17 @@
         <![endif]-->
     </head>
     <body>
+        
+        <!-- Facebook JS SDK: begins -->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <!-- Facebook JS SDK: ends -->
         
         <!-- Browser upgrade message -->
         <!--[if lt IE 8]>
@@ -70,6 +90,19 @@
 
             <div class="sme-content" id="sme-context">
                 <h1>Welcome!</h1>
+                <div>
+                    <!-- Twitter: tweet, share -->
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="https://github.com/ljnotes/spell-me-out" data-via="ljnotes" data-related="ljnotes" data-hashtags="spell-me-out" data-dnt="true">Tweet</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    <!-- Twitter: follow -->
+                    <a href="https://twitter.com/ljnotes" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ljnotes</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    <!-- Facebook: like, share -->
+                    <div class="fb-like" data-href="https://github.com/ljnotes/spell-me-out" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+                    <!-- LinkedIn: share -->
+                    <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+                    <script type="IN/Share" data-url="https://github.com/ljnotes/spell-me-out" data-counter="right"></script>
+                </div>
                 <p class="lead" data-bind="text: smeInputLabelText"></p>
                 <div class="input-group sme-input-section">
                     <input type="text" class="form-control" data-bind="value: smeInput, valueUpdate: 'afterkeydown', attr: { placeholder: smeInputLabelText, title: smeInputLabelText }" autofocus />

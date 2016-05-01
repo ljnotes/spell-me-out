@@ -104,6 +104,10 @@ body {
   text-align: center;
 }
 
+.sme-output-section {
+    padding: .2em .8em .3em;
+} 
+
 
 /* ==========================================================================
    Helper classes
