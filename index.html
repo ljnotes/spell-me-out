@@ -92,24 +92,28 @@
                 <h1>Welcome!</h1>
                 <div>
                     <!-- Twitter: tweet, share -->
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="https://github.com/ljnotes/spell-me-out" data-via="ljnotes" data-related="ljnotes" data-hashtags="spell-me-out" data-dnt="true">Tweet</a>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-via="ljnotes" data-related="ljnotes" data-hashtags="spell-me-out">Tweet</a>
                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                     <!-- Twitter: follow -->
                     <a href="https://twitter.com/ljnotes" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ljnotes</a>
                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                    <!-- Facebook: like, share -->
-                    <div class="fb-like" data-href="https://github.com/ljnotes/spell-me-out" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
                     <!-- LinkedIn: share -->
                     <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
-                    <script type="IN/Share" data-url="https://github.com/ljnotes/spell-me-out" data-counter="right"></script>
+                    <script type="IN/Share" data-url="http://ljnotes.github.io/spell-me-out/" data-counter="right"></script>
+                    <!-- Facebook: like, share -->
+                    <div class="fb-like" data-href="http://ljnotes.github.io/spell-me-out/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
                 </div>
-                <p class="lead" data-bind="text: smeInputLabelText"></p>
+                <div class="page-header">
+                    <h1 data-bind="text: smeInputLabelText"></h1>
+                </div>
                 <div class="input-group sme-input-section">
                     <input type="text" class="form-control" data-bind="value: smeInput, valueUpdate: 'afterkeydown', attr: { placeholder: smeInputLabelText, title: smeInputLabelText }" autofocus />
                     <span class="input-group-addon" id="basic-addon2" data-bind="text: smeInputLength"></span>
                 </div>
-                <div class="input-group sme-output-section" data-bind="foreach: smeLetters">
-                    <span class="label label-info" data-bind="text: spell"></span>
+                <div class="sme-output-section">
+                    <div class="panel-body" data-bind="foreach: smeLetters">
+                        <span class="label label-info" data-bind="text: spell"></span>
+                    </div>
                 </div>
             </div>
 
