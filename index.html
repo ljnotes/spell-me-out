@@ -10,7 +10,7 @@
         <meta name="author" content="LJ">
         
         <!-- Title -->
-        <title>Spell-me-out!- by LJNotes</title>
+        <title>Spell-me-out! by LJNotes</title>
         
         <!-- Facebook and Open Graph tags -->
         <meta property="og:url"           content="http://ljnotes.github.io/spell-me-out" />
@@ -124,7 +124,12 @@
                 </div>
                 <div class="sme-output-section">
                     <div class="panel-body" data-bind="foreach: smeLetters">
+                        <!-- ko if: spell === "\r\n" -->
+                        <br/>
+                        <!-- /ko -->
+                        <!-- ko if: spell !== "\r\n" -->
                         <span class="label label-info" data-bind="text: spell"></span>
+                        <!-- /ko -->
                     </div>
                 </div>
             </div>
