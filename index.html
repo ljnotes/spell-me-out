@@ -91,17 +91,27 @@
             <div class="sme-content" id="sme-context">
                 <h1>Welcome!</h1>
                 <div>
-                    <!-- Twitter: tweet, share -->
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-via="ljnotes" data-related="ljnotes" data-hashtags="spell-me-out">Tweet</a>
-                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                    <!-- Twitter: follow -->
-                    <a href="https://twitter.com/ljnotes" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ljnotes</a>
-                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                    <!-- LinkedIn: share -->
-                    <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
-                    <script type="IN/Share" data-url="http://ljnotes.github.io/spell-me-out/" data-counter="right"></script>
-                    <!-- Facebook: like, share -->
-                    <div class="fb-like" data-href="http://ljnotes.github.io/spell-me-out/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                    <ul class="lj-sm-share-list">
+                        <!-- LinkedIn: share -->
+                        <li class="lj-sm-share-list-item lj-sm-share-btn lj-sm-share-btn-linkedin">
+                            <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+                            <script type="IN/Share" data-url="http://ljnotes.github.io/spell-me-out/" data-counter="right"></script>
+                        </li>
+                        <!-- Twitter: tweet, share -->
+                        <li class="lj-sm-share-list-item lj-sm-share-btn lj-sm-share-btn-twitter">
+                            <a href="https://twitter.com/share" class="twitter-share-button" data-via="ljnotes" data-related="ljnotes" data-hashtags="spell-me-out">Tweet</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                        </li>
+                        <!-- Twitter: follow -->
+                        <li class="lj-sm-share-list-item lj-sm-share-btn lj-sm-share-btn-twitter">
+                            <a href="https://twitter.com/ljnotes" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @ljnotes</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                        </li>
+                        <!-- Facebook: like, share -->
+                        <li class="lj-sm-share-list-item lj-sm-share-btn lj-sm-share-btn-fb">
+                            <div class="fb-like" data-href="http://ljnotes.github.io/spell-me-out/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                        </li>
+                    </ul>
                 </div>
                 <div class="page-header">
                     <h1 data-bind="text: smeInputLabelText"></h1>

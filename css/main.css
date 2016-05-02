@@ -104,10 +104,22 @@ body {
   text-align: center;
 }
 
-
-
 .sme-output-section > span {
     margin: 4px;
+}
+
+.lj-sm-share-list {
+    list-style-type: none;
+    list-style: none;
+    display: block; 
+    overflow: hidden; 
+}
+
+.lj-sm-share-list-item {
+    float: left;
+    margin-bottom: 0;
+    margin-right: 10px;
+    display: block; 
 }
 
 
