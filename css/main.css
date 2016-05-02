@@ -132,6 +132,7 @@ body {
 
 .lj-sm-share-list-item {
     float: left;
+    margin-right: 4px;
     margin-bottom: 0;
     margin-right: 10px;
     display: block; 
