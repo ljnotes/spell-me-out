@@ -10,7 +10,7 @@
  */
 var ljnotes = {
     app: "sme", // spell-me-out
-    appName: "LJNotes Spell-me-out!", 
+    appName: "Spell-me-out!", 
     version: "1.0.0"
 };
 

@@ -95,8 +95,13 @@ textarea {
    Application styles
    ========================================================================== */
 
+html, h1, h2, h3, h4, h5, h6, 
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "avenir-regular", helvetica, arial, sans-serif !important;
+}
 body {
   padding-top: 50px;
+  font-family: "avenir-regular", arial, sans-serif !important;
 }
 
 .sme-content {
@@ -108,7 +113,17 @@ body {
     margin: 4px;
 }
 
+.lj-profie-lane {
+    display: block;
+    overflow: hidden; 
+}
+
+.lj-profile-author {
+    float: left;
+}
+
 .lj-sm-share-list {
+    float: right;
     list-style-type: none;
     list-style: none;
     display: block; 
